@@ -923,7 +923,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 1
-  m_Constraints: 112
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!1001 &740752915
 PrefabInstance:
@@ -951,7 +951,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4463868907105534, guid: ccd8c3b89aa02e943a08ab9238a8a70c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.1
+      value: -0.833
       objectReference: {fileID: 0}
     - target: {fileID: 4463868907105534, guid: ccd8c3b89aa02e943a08ab9238a8a70c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -959,7 +959,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4463868907105534, guid: ccd8c3b89aa02e943a08ab9238a8a70c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.5
+      value: 0.035
       objectReference: {fileID: 0}
     - target: {fileID: 4463868907105534, guid: ccd8c3b89aa02e943a08ab9238a8a70c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1022,6 +1022,7 @@ GameObject:
   - component: {fileID: 1021490535}
   - component: {fileID: 1021490534}
   - component: {fileID: 1021490541}
+  - component: {fileID: 1021490542}
   m_Layer: 0
   m_Name: Grab Interactable
   m_TagString: Untagged
@@ -1046,7 +1047,7 @@ MonoBehaviour:
   m_TwoHandedRotationMode: 1
   m_AllowOneHandedScaling: 1
   m_AllowTwoHandedScaling: 0
-  m_OneHandedScaleSpeed: 0.5
+  m_OneHandedScaleSpeed: 2.5
   m_ThresholdMoveRatioForScale: 0.05
   m_ClampScaling: 1
   m_MinimumScaleRatio: 0.25
@@ -1227,7 +1228,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -1311,7 +1312,7 @@ Transform:
   m_GameObject: {fileID: 1021490533}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0.5}
+  m_LocalPosition: {x: -0.633, y: 1.077, z: 0.02}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1326,25 +1327,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 1021490533}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f900b7e06540ba4d954d789e9f375f1, type: 3}
+  m_Script: {fileID: 11500000, guid: 9b68436b0f847a848b06c14660d65eb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thumbstickInput:
-    m_UseReference: 1
-    m_Action:
-      m_Name: Thumbstick Input
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: d1da3e5f-29cc-448a-8702-80f7cdcbfa45
-      m_Processors: 
-      m_Interactions: Hold
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: -4145207309781008045, guid: c348712bda248c246b8c49b3db54643f,
-      type: 3}
-  rotationSpeed: 100
-  deadzone: 0.1
-  smoothFactor: 0.1
+  thumbstickAction: {fileID: -4145207309781008045, guid: c348712bda248c246b8c49b3db54643f,
+    type: 3}
+  rotationSpeed: 900
+--- !u!114 &1021490542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1021490533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e427dc97cc536d4591e935fc4db6359, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultMaterial: {fileID: 2100000, guid: ee3665d37526b864ea79c19c9bf79bbb, type: 2}
+  highlightMaterial: {fileID: 2100000, guid: aec8a03dbb6b75345af8869a7a9a5b5a, type: 2}
 --- !u!1 &1238011848
 GameObject:
   m_ObjectHideFlags: 0
